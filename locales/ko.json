@@ -3,10 +3,10 @@
     "frame_331": {
       "frame_66": {
         "frame_65": {
-          "whalebase_prop_trading_on": "Whalebase - Prop Trading on"
+          "whalebase_prop_trading_on": "Whalebase - 프랍 트레이딩 진행 중"
         },
-        "trading": "Whalebase의 자금 지원을 받는\n트레이딩.",
-        "you_take_the_profits_leave_the_losses_to": "수익은 당신이, 손실은 우리가 담당합니다."
+        "trading": "트레이딩,\nWhalebase가 자본을 지원합니다.",
+        "you_take_the_profits_leave_the_losses_to": "수익은 당신의 것, 손실은 저희가 책임집니다."
       },
       "frame_67": {
         "frame_36": {
@@ -25,7 +25,7 @@
         "evaluation_pass_rate": "평가 통과율"
       },
       "frame_77": {
-        "total_payout": "총 지급액"
+        "total_payout": "총 수익 지급액"
       }
     },
     "frame_301": {
@@ -37,15 +37,15 @@
     },
     "frame_91": {
       "frame_88": {
-        "successful_payouts": "Whalebase 트레이더에게\n성공적으로 지급된 자금",
-        "we_help_traders_achieve_financial_succes": "우리는 트레이더들이 재정적 성공을 이루고 함께 트레이딩 경력을 발전시킬 수 있도록 지원합니다."
+        "successful_payouts": "Whalebase 트레이더\n수익 지급 현황",
+        "we_help_traders_achieve_financial_succes": "트레이더의 금융적 성공과 트레이딩 커리어 성장을 함께 만들어 갑니다."
       }
     },
     "frame_306": {
       "frame_89": {
         "frame_321": {
-          "how_it_works": "작동 원리",
-          "start_earning_rewards_all_it_takes_is_tw": "보상을 시작하세요. 단 두 가지 단계만 거치면 됩니다."
+          "how_it_works": "이용 방법",
+          "start_earning_rewards_all_it_takes_is_tw": "두 단계만으로 수익을 시작하세요."
         }
       }
     },
@@ -53,20 +53,20 @@
       "frame_89": {
         "frame_321": {
           "choose_your_challenge": "챌린지 선택",
-          "select_the_challenge_that_fits_your_trad": "당신의 트레이딩 스타일과 목표에 맞는 챌린지를 선택하세요."
+          "select_the_challenge_that_fits_your_trad": "나의 트레이딩 스타일과 목표에 맞는 챌린지를 선택하세요."
         }
       }
     },
     "frame_307": {
       "frame_88": {
         "grow_with_us": "함께 성장하세요",
-        "learn_connect": "규율 있는 트레이더 커뮤니티와\n함께 배우고, 연결하고, 성장하세요."
+        "learn_connect": "규율 있는 트레이더들의 커뮤니티에서\n배우고, 연결되고, 함께 성장하세요."
       }
     },
     "frame_308": {
       "frame_88": {
         "customer_support": "고객 지원",
-        "our_team_is_here": "우리 팀이 당신의 자신 있는\n트레이딩을 돕기 위해 여기 있습니다."
+        "our_team_is_here": "자신 있게 트레이딩할 수 있도록\n저희 팀이 도와드립니다."
       }
     },
     "frame_304": {
@@ -76,7 +76,7 @@
     },
     "frame_373": {
       "frame_66": {
-        "become_a_whale_today": "오늘 Whale이 되세요."
+        "become_a_whale_today": "지금 바로 웨일이 되어보세요."
       }
     },
     "frame_371": {
@@ -106,10 +106,10 @@
     "frame_81": {
       "frame_329": {
         "frame_312": {
-          "why": "프롭 트레이딩을\n하는 이유"
+          "why": "왜\n프랍 트레이딩인가"
         },
         "frame_311": {
-          "keep_90_of_the_profits": "수익의 90%는 당신의 것,\n손실은 100% 우리가 감당합니다."
+          "keep_90_of_the_profits": "수익의 90%는 트레이더 몫,\n손실 100%는 저희가 부담합니다."
         }
       }
     }
@@ -118,10 +118,10 @@
     "frame_311": {
       "frame_318": {
         "frame_319": {
-          "deposit_100": "$100을 입금하면,"
+          "deposit_100": "$100 예치로,"
         },
         "frame_310": {
-          "trade_with_10_000": "$10,000으로 트레이딩합니다."
+          "trade_with_10_000": "$10,000 규모로 거래하세요."
         }
       }
     }
@@ -131,46 +131,46 @@
       "frame_296": {
         "frame_304": {
           "no_hidden_costs": "숨겨진 비용 없음",
-          "no_extra_cost_ever_your_initial_deposit_": "추가 비용은 절대 없습니다. 초기 입금이 유일한 약정입니다."
+          "no_extra_cost_ever_your_initial_deposit_": "추가 비용은 없습니다. 최초 입금액이 전부입니다."
         }
       },
       "frame_300": {
         "frame_304": {
-          "scale_your_deposit": "입금액 확대",
-          "up_to_200x_the_bigger_your_deposit_the_b": "최대 200배. 입금액이 클수록 우리의 자금 지원도 커집니다."
+          "scale_your_deposit": "예치금 규모 확대",
+          "up_to_200x_the_bigger_your_deposit_the_b": "최대 200배. 예치금이 클수록 더 큰 자금을 지원합니다."
         }
       }
     },
     "frame_299": {
       "frame_296": {
         "frame_304": {
-          "minimal_requirement": "최소 요구사항",
-          "single_step_evaluation_pass_one_evaluati": "단일 단계 평가. 하나의 평가를 통과하면 100배 확대가 활성화됩니다."
+          "minimal_requirement": "최소 요건",
+          "single_step_evaluation_pass_one_evaluati": "단일 평가 방식. 평가 한 번만 통과하면 100배 규모가 활성화됩니다."
         }
       },
       "frame_303": {
         "frame_304": {
-          "futures_trading": "선물 트레이딩",
-          "more_leverage_with_futures_high_performa": "선물로 더 많은 레버리지를 얻으세요. DeepBook Margin에서 지원하는 고성능 실행."
+          "futures_trading": "선물 거래",
+          "more_leverage_with_futures_high_performa": "선물로 더 높은 레버리지를. DeepBook 증거금 기반의 고성능 체결 환경을 제공합니다."
         }
       },
       "frame_309": {
         "frame_304": {
-          "understand_your_trade": "거래 이해하기",
-          "ai_powered_analysis_master_the_market_wi": "AI 기반 분석. 실시간 성과 대시보드로 시장을 마스터하세요."
+          "understand_your_trade": "내 거래 파악하기",
+          "ai_powered_analysis_master_the_market_wi": "AI 기반 분석으로 실시간 성과 대시보드를 통해 시장을 마스터하세요."
         }
       },
       "frame_308": {
         "frame_304": {
           "global_assets": "글로벌 자산",
-          "from_us_stocks_commodities_to_crypto_str": "미국 주식, 상품에서 암호화폐까지. Sui 기반 RWA를 통한 글로벌 유동성에 대한 간편한 접근."
+          "from_us_stocks_commodities_to_crypto_str": "미국 주식, 원자재, 암호화폐까지. Sui 네이티브 RWA로 글로벌 유동성에 간편하게 접근하세요."
         }
       }
     },
     "frame_107": {
       "frame_98": {
         "frame_95": {
-          "account_balance": "계좌 잔액"
+          "account_balance": "계좌 잔고"
         },
         "frame_94": {
           "evaluation_fee": "평가 수수료"
@@ -215,7 +215,7 @@
       },
       "frame_298": {
         "frame_284": {
-          "get_funded_payouts": "펀딩 받기 및 수익 인출"
+          "get_funded_payouts": "자본 지원 및 수익 출금"
         }
       }
     }
@@ -225,15 +225,15 @@
       "frame_322": {
         "frame_82": {
           "challenge": "챌린지",
-          "a_one_time_evaluation_of_trading_perform": "일회성 트레이딩 성과 및 위험관리 평가입니다."
+          "a_one_time_evaluation_of_trading_perform": "트레이딩 성과와 리스크 관리에 대한 1회 평가입니다."
         }
       }
     },
     "frame_298": {
       "frame_322": {
         "frame_93": {
-          "funded_account": "펀딩 계정",
-          "start_trading_on_a_funded_account_with_w": "인출 가능한 수익이 있는 펀딩 계정에서 트레이딩을 시작하세요."
+          "funded_account": "펀디드 계좌",
+          "start_trading_on_a_funded_account_with_w": "출금 가능한 수익이 있는 펀디드 계좌로 거래를 시작하세요."
         }
       },
       "frame_325": {
@@ -255,20 +255,20 @@
     "frame_322": {
       "frame_92": {
         "frame_83": {
-          "choose_your_challenge": "챌린지 선택"
+          "choose_your_challenge": "챌린지를 선택하세요"
         },
         "frame_84": {
           "achieve_your_profit_target": "수익 목표 달성"
         },
         "frame_85": {
-          "follow_the_trading_objectives": "트레이딩 목표 준수"
+          "follow_the_trading_objectives": "트레이딩 규칙 준수"
         }
       }
     },
     "frame_107": {
       "frame_98": {
         "frame_95": {
-          "account_balance": "계정 잔액"
+          "account_balance": "계좌 잔고"
         },
         "frame_94": {
           "evaluation_fee": "평가 수수료"
@@ -280,36 +280,36 @@
     "frame_322": {
       "frame_94": {
         "frame_83": {
-          "get_a_real_funded_account_up_to_1_000_00": "$1,000,000까지의 실제 펀딩 계정 획득"
+          "get_a_real_funded_account_up_to_1_000_00": "최대 $1,000,000 규모의 실제 펀디드 계좌를 받으세요"
         },
         "frame_84": {
-          "take_90_of_your_profits": "수익의 90% 획득"
+          "take_90_of_your_profits": "수익의 90%를 가져가세요"
         },
         "frame_85": {
-          "follow_the_same_trading_objectives": "동일한 트레이딩 목표 준수"
+          "follow_the_same_trading_objectives": "동일한 트레이딩 규칙을 준수하세요"
         }
       }
     },
     "frame_324": {
       "frame_102": {
         "frame_82": {
-          "account_balance": "계정 잔액"
+          "account_balance": "계좌 잔고"
         },
         "frame_97": {
           "profit_target": "수익 목표"
         },
         "frame_93": {
-          "max_daily_drawdown": "최대 일일 손실"
+          "max_daily_drawdown": "일일 최대 손실 한도"
         },
         "frame_94": {
-          "max_loss": "최대 손실"
+          "max_loss": "최대 손실 한도"
         },
         "frame_95": {
-          "min_trading_days": "최소 트레이딩 일수",
+          "min_trading_days": "최소 거래 일수",
           "10_days": "10일"
         },
         "frame_96": {
-          "trading_period": "트레이딩 기간",
+          "trading_period": "거래 기간",
           "unlimited": "무제한"
         }
       }
@@ -322,7 +322,7 @@
           "overview": "개요"
         },
         "frame_322": {
-          "show_steps": "단계 표시"
+          "show_steps": "단계 보기"
         }
       }
     }
@@ -345,21 +345,21 @@
     "frame_296": {
       "frame_107": {
         "frame_96": {
-          "avg_payout": "평균 수익"
+          "avg_payout": "평균 수익 지급액"
         }
       }
     },
     "frame_301": {
       "frame_107": {
         "frame_96": {
-          "avg_payout": "평균 수익"
+          "avg_payout": "평균 수익 지급액"
         }
       }
     },
     "frame_302": {
       "frame_107": {
         "frame_96": {
-          "avg_payout": "평균 수익"
+          "avg_payout": "평균 수익 지급액"
         }
       }
     }
@@ -368,7 +368,7 @@
     "frame_107": {
       "frame_98": {
         "frame_95": {
-          "account_balance": "계정 잔액"
+          "account_balance": "계좌 잔고"
         },
         "frame_94": {
           "evaluation_fee": "평가 수수료"
@@ -384,16 +384,16 @@
           "community_and_direct_support": "커뮤니티 및 직접 지원"
         },
         "frame_34": {
-          "coming_soon": "곧 제공 예정"
+          "coming_soon": "준비 중"
         }
       },
       "frame_82": {
         "frame_352": {
           "open_a_ticket_on_discord": "디스코드에서 티켓 열기",
-          "request_support_to_your_dedicated_manage": "담당 매니저에게 지원 요청"
+          "request_support_to_your_dedicated_manage": "전담 매니저에게 지원을 요청하세요."
         },
         "frame_34": {
-          "coming_soon": "곧 제공 예정"
+          "coming_soon": "준비 중"
         }
       }
     },
@@ -404,7 +404,7 @@
           "tutorials_and_trading_education": "튜토리얼 및 트레이딩 교육"
         },
         "frame_34": {
-          "coming_soon": "곧 제공 예정"
+          "coming_soon": "준비 중"
         }
       },
       "frame_82": {
@@ -413,7 +413,7 @@
           "support_whalebase_trade": "support@whalebase.trade"
         },
         "frame_34": {
-          "coming_soon": "곧 제공 예정"
+          "coming_soon": "준비 중"
         }
       }
     }
@@ -422,19 +422,19 @@
     "frame_294": {
       "frame_128": {
         "frame_102": {
-          "what_is_a_prop_trading": "프롭 트레이딩이란?"
+          "what_is_a_prop_trading": "프랍 트레이딩이란?"
         },
         "frame_109": {
           "how_do_i_start": "어떻게 시작하나요?"
         },
         "frame_105": {
-          "how_do_i_become_a_funded_trader": "펀딩 받은 트레이더가 되려면?"
+          "how_do_i_become_a_funded_trader": "펀디드 트레이더가 되려면 어떻게 해야 하나요?"
         },
         "frame_108": {
-          "how_do_i_withdraw_profits": "수익금을 어떻게 출금하나요?"
+          "how_do_i_withdraw_profits": "수익은 어떻게 출금하나요?"
         },
         "frame_107": {
-          "do_i_owe_whalebase_money_if_i_lose": "손실이 발생하면 Whalebase에 돈을 내야 하나요?"
+          "do_i_owe_whalebase_money_if_i_lose": "손실이 발생하면 Whalebase에 돈을 갚아야 하나요?"
         }
       }
     }
@@ -443,13 +443,13 @@
     "frame_66": {
       "frame_92": {
         "frame_83": {
-          "unlimited_number_of_free_trials": "무제한 무료 체험"
+          "unlimited_number_of_free_trials": "무료 체험 무제한 제공"
         },
         "frame_84": {
-          "trade_up_to_1_000_000_of_our_capital": "당사 자본으로 최대 $1,000,000까지 거래"
+          "trade_up_to_1_000_000_of_our_capital": "최대 $1,000,000의 당사 자본으로 트레이딩"
         },
         "frame_85": {
-          "withdraw_your_wins_anytime": "언제든지 수익금 출금"
+          "withdraw_your_wins_anytime": "수익은 언제든지 출금 가능"
         }
       },
       "frame_67": {
@@ -475,7 +475,7 @@
     "frame_385": {
       "frame_70": {
         "frame_69": {
-          "pricing": "가격"
+          "pricing": "요금제"
         }
       }
     }
@@ -483,33 +483,33 @@
   "frame_336": {
     "frame_102": {
       "frame_353": {
-        "what_is_a_prop_trading": "프롭 트레이딩이란 무엇인가요?"
+        "what_is_a_prop_trading": "프랍 트레이딩이란?"
       },
-      "a_proprietary_trading_firm_allocates_its": "프롭 트레이딩 회사는 자사 자본을 트레이더에게 배분합니다. 트레이더는 먼저 평가를 받은 후 회사의 위험 관리 규칙을 따르면서 수익의 일부를 얻습니다."
+      "a_proprietary_trading_firm_allocates_its": "프랍 트레이딩 회사는 자사 자본을 트레이더에게 배분합니다. 트레이더는 평가 과정을 거친 후, 회사의 리스크 규칙을 준수하며 수익의 일부를 분배받습니다."
     },
     "frame_115": {
       "frame_353": {
         "how_to_start": "어떻게 시작하나요?"
       },
-      "getting_started_is_simple": "시작하기는 간단합니다:\n선호하는 프로그램/계좌 규모와 거래 설정을 선택합니다.\n규칙을 따르고 수익 목표를 달성하여 Whalebase 거래 챌린지를 완료합니다.\n통과 후 당사가 성과를 검토하고 필요한 적격성 검사를 완료합니다.\n승인되면 펀딩된 계좌에 접근할 수 있으며 Whalebase 수익 분배 모델에 따라 거래를 시작할 수 있습니다."
+      "getting_started_is_simple": "시작 방법은 간단합니다:\n원하는 프로그램/계좌 크기 및 트레이딩 설정을 선택하세요.\n규칙을 준수하고 수익 목표를 달성하여 Whalebase 트레이딩 챌린지를 완료하세요.\n통과 후, 성과를 검토하고 필요한 경우 자격 심사를 진행합니다.\n승인되면 펀디드 계좌에 접근권이 부여되며, Whalebase 수익 분배 모델 하에 트레이딩을 시작할 수 있습니다."
     },
     "frame_116": {
       "frame_353": {
-        "how_do_i_become_a_funded_trader": "펀딩된 트레이더가 되려면 어떻게 하나요?"
+        "how_do_i_become_a_funded_trader": "펀디드 트레이더가 되려면 어떻게 하나요?"
       },
-      "a_one_step_challenge_or": "1단계 챌린지, 또는\n2단계 프로세스(챌린지 + 검증)를 선택합니다.\n이 단계들에서 Whalebase 규칙에 따라 시뮬레이션 환경에서 거래하여 위험 관리 능력과 일관성을 입증합니다."
+      "a_one_step_challenge_or": "1단계 챌린지, 또는\n2단계 과정(챌린지 + 인증).\n이 단계에서는 Whalebase 규칙 하에 시뮬레이션 환경에서 트레이딩하며 리스크 관리 능력과 일관성을 입증합니다."
     },
     "frame_117": {
       "frame_353": {
-        "how_do_i_withdraw_profits": "수익금을 어떻게 출금하나요?"
+        "how_do_i_withdraw_profits": "수익은 어떻게 출금하나요?"
       },
-      "if_eligible_you_submit_a_payout_request_": "적격이면 대시보드에서 출금 요청을 제출합니다. 적격 여부는 일반적으로 다음 사항에 따라 결정됩니다:\n최소 수익 임계값\n최소 거래일\n모든 규칙 준수\n출금 검토 통과"
+      "if_eligible_you_submit_a_payout_request_": "자격 요건 충족 시, 대시보드에서 수익 출금 요청을 제출하세요. 일반적인 자격 요건은 다음과 같습니다:\n최소 수익 기준 달성\n최소 거래 일수 충족\n모든 규칙 준수\n수익 출금 심사 통과"
     },
     "frame_118": {
       "frame_353": {
-        "do_traders_owe_whalebase_money_if_they_l": "트레이더가 손실을 입으면 Whalebase에 돈을 내야 하나요?"
+        "do_traders_owe_whalebase_money_if_they_l": "손실이 발생하면 트레이더가 Whalebase에 돈을 갚아야 하나요?"
       },
-      "no_traders_are_generally_not_liable_for_": "아니요. 트레이더는 프로그램 규칙을 따르는 한 평가 수수료를 제외한 손실에 대해 책임을 지지 않습니다."
+      "no_traders_are_generally_not_liable_for_": "아니요. 프로그램 규칙을 준수하는 한, 트레이더는 평가 수수료 이상의 손실에 대해 책임을 지지 않습니다."
     }
   }
 }

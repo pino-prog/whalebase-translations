@@ -3,14 +3,14 @@
     "frame_331": {
       "frame_66": {
         "frame_65": {
-          "whalebase_prop_trading_on": "Whalebase - Prop Trading on"
+          "whalebase_prop_trading_on": "Whalebase - プロップトレーディング"
         },
-        "trading": "Whalebaseが\n資金提供するトレーディング。",
-        "you_take_the_profits_leave_the_losses_to": "利益はあなたが得て、損失は私たちが負担します。"
+        "trading": "トレード、\nWhalebaseが資金を提供。",
+        "you_take_the_profits_leave_the_losses_to": "利益はあなたのもの、損失は私たちが負担します。"
       },
       "frame_67": {
         "frame_36": {
-          "get_started": "始める"
+          "get_started": "今すぐ始める"
         },
         "frame_37": {
           "free_trial": "無料トライアル"
@@ -25,53 +25,53 @@
         "evaluation_pass_rate": "評価合格率"
       },
       "frame_77": {
-        "total_payout": "総支払額"
+        "total_payout": "累計報酬支払額"
       }
     },
     "frame_301": {
       "frame_298": {
         "frame_299": {
-          "why": "トレーダーが\nWhalebaseを選ぶ\n理由"
+          "why": "トレーダーが\nWhalebaseを\n選ぶ理由"
         }
       }
     },
     "frame_91": {
       "frame_88": {
-        "successful_payouts": "Whalebaseトレーダーへの\n成功した支払い",
-        "we_help_traders_achieve_financial_succes": "トレーダーの経済的成功と取引キャリアの成長をサポートします。"
+        "successful_payouts": "Whalebaseトレーダーへの\n報酬支払い実績",
+        "we_help_traders_achieve_financial_succes": "トレーダーの財務的成功と、トレードキャリアの成長を全力でサポートします。"
       }
     },
     "frame_306": {
       "frame_89": {
         "frame_321": {
-          "how_it_works": "仕組み",
-          "start_earning_rewards_all_it_takes_is_tw": "報酬を獲得しましょう。必要なのは2つのステップだけです。"
+          "how_it_works": "仕組みを見る",
+          "start_earning_rewards_all_it_takes_is_tw": "報酬を獲得しよう。たった2ステップで始められます。"
         }
       }
     },
     "frame_305": {
       "frame_89": {
         "frame_321": {
-          "choose_your_challenge": "チャレンジを選択",
-          "select_the_challenge_that_fits_your_trad": "あなたのトレーディングスタイルと目標に合ったチャレンジを選択してください。"
+          "choose_your_challenge": "チャレンジを選ぶ",
+          "select_the_challenge_that_fits_your_trad": "自分のトレードスタイルと目標に合ったチャレンジを選択する。"
         }
       }
     },
     "frame_307": {
       "frame_88": {
-        "grow_with_us": "一緒に成長しよう",
-        "learn_connect": "規律あるトレーダーコミュニティと\n一緒に学び、繋がり、成長しましょう。"
+        "grow_with_us": "私たちと共に成長しよう",
+        "learn_connect": "規律あるトレーダーのコミュニティで\n学び、繋がり、成長しよう。"
       }
     },
     "frame_308": {
       "frame_88": {
         "customer_support": "カスタマーサポート",
-        "our_team_is_here": "私たちのチームは\n自信を持ってトレーディングできるようにサポートします。"
+        "our_team_is_here": "自信を持ってトレードできるよう、\n私たちのチームがサポートします。"
       }
     },
     "frame_304": {
       "frame_294": {
-        "frequently_asked_questions": "よくある質問"
+        "frequently_asked_questions": "よくあるご質問"
       }
     },
     "frame_373": {
@@ -97,7 +97,7 @@
           "log_in": "ログイン"
         },
         "frame_35": {
-          "get_started": "始める"
+          "get_started": "今すぐ始める"
         }
       }
     }
@@ -106,10 +106,10 @@
     "frame_81": {
       "frame_329": {
         "frame_312": {
-          "why": "プロップトレーディング\nについて"
+          "why": "なぜ\nプロップトレーディングなのか"
         },
         "frame_311": {
-          "keep_90_of_the_profits": "利益の90%をあなたが獲得、\n損失の100%は私たちが負担。"
+          "keep_90_of_the_profits": "利益の90%はあなたのもの、\nリスクの100%は私たちが負担します。"
         }
       }
     }
@@ -118,10 +118,10 @@
     "frame_311": {
       "frame_318": {
         "frame_319": {
-          "deposit_100": "$100を入金して、"
+          "deposit_100": "$100の評価料で、"
         },
         "frame_310": {
-          "trade_with_10_000": "$10,000でトレーディング。"
+          "trade_with_10_000": "$10,000の資金でトレード。"
         }
       }
     }
@@ -130,50 +130,50 @@
     "frame_298": {
       "frame_296": {
         "frame_304": {
-          "no_hidden_costs": "隠れた費用なし",
-          "no_extra_cost_ever_your_initial_deposit_": "追加費用は一切ありません。初期入金のみがあなたの負担です。"
+          "no_hidden_costs": "隠れコストなし",
+          "no_extra_cost_ever_your_initial_deposit_": "追加費用は一切なし。最初の入金のみのコミットメントです。"
         }
       },
       "frame_300": {
         "frame_304": {
-          "scale_your_deposit": "入金をスケーリング",
-          "up_to_200x_the_bigger_your_deposit_the_b": "最大200倍。入金が大きいほど、私たちの資金提供も大きくなります。"
+          "scale_your_deposit": "資金をスケールアップ",
+          "up_to_200x_the_bigger_your_deposit_the_b": "最大200倍。入金額が大きいほど、提供資金も拡大します。"
         }
       }
     },
     "frame_299": {
       "frame_296": {
         "frame_304": {
-          "minimal_requirement": "最小要件",
-          "single_step_evaluation_pass_one_evaluati": "1段階評価。1つの評価に合格して100倍スケールを有効化。"
+          "minimal_requirement": "最低限の条件",
+          "single_step_evaluation_pass_one_evaluati": "1段階評価プロセス。評価を1回合格するだけで、100倍スケールが有効になります。"
         }
       },
       "frame_303": {
         "frame_304": {
-          "futures_trading": "先物トレーディング",
-          "more_leverage_with_futures_high_performa": "先物でより高いレバレッジ。DeepBook Marginによるハイパフォーマンス実行。"
+          "futures_trading": "先物取引",
+          "more_leverage_with_futures_high_performa": "先物取引でさらなるレバレッジを。DeepBook証拠金による高性能な約定を実現。"
         }
       },
       "frame_309": {
         "frame_304": {
-          "understand_your_trade": "トレードを理解する",
-          "ai_powered_analysis_master_the_market_wi": "AI駆動分析。リアルタイムパフォーマンスダッシュボードでマーケットをマスター。"
+          "understand_your_trade": "取引を把握する",
+          "ai_powered_analysis_master_the_market_wi": "AIによる分析でマーケットを制する。リアルタイムのパフォーマンスダッシュボードを活用しよう。"
         }
       },
       "frame_308": {
         "frame_304": {
-          "global_assets": "グローバルアセット",
-          "from_us_stocks_commodities_to_crypto_str": "米国株、商品からクリプトまで。Sui native RWAを通じたグローバルリクイディティへの効率的なアクセス。"
+          "global_assets": "グローバル資産",
+          "from_us_stocks_commodities_to_crypto_str": "米国株・コモディティから暗号資産まで。Suiネイティブ RWAを通じてグローバル流動性へシームレスにアクセス。"
         }
       }
     },
     "frame_107": {
       "frame_98": {
         "frame_95": {
-          "account_balance": "アカウント残高"
+          "account_balance": "口座残高"
         },
         "frame_94": {
-          "evaluation_fee": "評価費用"
+          "evaluation_fee": "評価手数料"
         }
       }
     }
@@ -210,12 +210,12 @@
     "frame_316": {
       "frame_296": {
         "frame_284": {
-          "evaluation": "評価"
+          "evaluation": "評価プロセス"
         }
       },
       "frame_298": {
         "frame_284": {
-          "get_funded_payouts": "資金提供を受ける＆配当"
+          "get_funded_payouts": "資金提供と報酬受取"
         }
       }
     }
@@ -225,7 +225,7 @@
       "frame_322": {
         "frame_82": {
           "challenge": "チャレンジ",
-          "a_one_time_evaluation_of_trading_perform": "トレード実績とリスク管理の単一評価。"
+          "a_one_time_evaluation_of_trading_perform": "トレードパフォーマンスとリスク管理の一回限りの評価プロセス。"
         }
       }
     },
@@ -233,7 +233,7 @@
       "frame_322": {
         "frame_93": {
           "funded_account": "資金提供口座",
-          "start_trading_on_a_funded_account_with_w": "出金可能な配当を備えた資金提供口座でトレードを開始します。"
+          "start_trading_on_a_funded_account_with_w": "報酬出金可能な資金提供口座でトレードを開始しましょう。"
         }
       },
       "frame_325": {
@@ -246,7 +246,7 @@
       },
       "frame_324": {
         "frame_105": {
-          "start_challenge": "チャレンジを開始"
+          "start_challenge": "チャレンジを開始する"
         }
       }
     }
@@ -255,13 +255,13 @@
     "frame_322": {
       "frame_92": {
         "frame_83": {
-          "choose_your_challenge": "チャレンジを選択"
+          "choose_your_challenge": "チャレンジを選択する"
         },
         "frame_84": {
           "achieve_your_profit_target": "利益目標を達成する"
         },
         "frame_85": {
-          "follow_the_trading_objectives": "トレード目標を遵守する"
+          "follow_the_trading_objectives": "取引目標に従う"
         }
       }
     },
@@ -280,13 +280,13 @@
     "frame_322": {
       "frame_94": {
         "frame_83": {
-          "get_a_real_funded_account_up_to_1_000_00": "最大$1,000,000までの実際の資金提供口座を取得"
+          "get_a_real_funded_account_up_to_1_000_00": "最大$1,000,000の資金提供口座を獲得"
         },
         "frame_84": {
-          "take_90_of_your_profits": "利益の90%を獲得"
+          "take_90_of_your_profits": "利益の90%を受け取る"
         },
         "frame_85": {
-          "follow_the_same_trading_objectives": "同じトレード目標を遵守"
+          "follow_the_same_trading_objectives": "同じ取引目標に従ってトレードする"
         }
       }
     },
@@ -299,18 +299,18 @@
           "profit_target": "利益目標"
         },
         "frame_93": {
-          "max_daily_drawdown": "最大日次ドローダウン"
+          "max_daily_drawdown": "1日の最大損失率"
         },
         "frame_94": {
-          "max_loss": "最大損失"
+          "max_loss": "最大損失（最大ドローダウン）"
         },
         "frame_95": {
-          "min_trading_days": "最小トレード日数",
+          "min_trading_days": "最低取引日数",
           "10_days": "10日間"
         },
         "frame_96": {
-          "trading_period": "トレード期間",
-          "unlimited": "無制限"
+          "trading_period": "取引期間",
+          "unlimited": "無期限"
         }
       }
     }
@@ -331,7 +331,7 @@
     "frame_95": {
       "frame_108": {
         "frame_284": {
-          "recommended": "推奨"
+          "recommended": "おすすめ"
         },
         "frame_285": {
           "25_discount": "25%割引",
@@ -345,21 +345,21 @@
     "frame_296": {
       "frame_107": {
         "frame_96": {
-          "avg_payout": "平均配当"
+          "avg_payout": "平均報酬額"
         }
       }
     },
     "frame_301": {
       "frame_107": {
         "frame_96": {
-          "avg_payout": "平均配当"
+          "avg_payout": "平均報酬額"
         }
       }
     },
     "frame_302": {
       "frame_107": {
         "frame_96": {
-          "avg_payout": "平均配当"
+          "avg_payout": "平均報酬額"
         }
       }
     }
@@ -384,36 +384,36 @@
           "community_and_direct_support": "コミュニティと直接サポート。"
         },
         "frame_34": {
-          "coming_soon": "近日公開予定"
+          "coming_soon": "近日公開"
         }
       },
       "frame_82": {
         "frame_352": {
-          "open_a_ticket_on_discord": "DiscordでチケットをオープンしてPDF",
-          "request_support_to_your_dedicated_manage": "専任マネージャーにサポートをリクエストしてください。"
+          "open_a_ticket_on_discord": "Discordでチケットを作成する",
+          "request_support_to_your_dedicated_manage": "専任マネージャーにサポートをリクエストする。"
         },
         "frame_34": {
-          "coming_soon": "近日公開予定"
+          "coming_soon": "近日公開"
         }
       }
     },
     "frame_42": {
       "frame_351": {
         "frame_82": {
-          "youtube_channel": "YouTubeチャネル",
-          "tutorials_and_trading_education": "チュートリアルとトレード教育。"
+          "youtube_channel": "YouTubeチャンネル",
+          "tutorials_and_trading_education": "チュートリアルとトレード教育コンテンツ。"
         },
         "frame_34": {
-          "coming_soon": "近日公開予定"
+          "coming_soon": "近日公開"
         }
       },
       "frame_82": {
         "frame_352": {
-          "e_mail": "メール",
+          "e_mail": "メールアドレス",
           "support_whalebase_trade": "support@whalebase.trade"
         },
         "frame_34": {
-          "coming_soon": "近日公開予定"
+          "coming_soon": "近日公開"
         }
       }
     }
@@ -425,16 +425,16 @@
           "what_is_a_prop_trading": "プロップトレーディングとは？"
         },
         "frame_109": {
-          "how_do_i_start": "どうやって始めるのか？"
+          "how_do_i_start": "始め方は？"
         },
         "frame_105": {
-          "how_do_i_become_a_funded_trader": "資金提供を受けたトレーダーになるにはどうすればいいですか？"
+          "how_do_i_become_a_funded_trader": "資金提供トレーダーになるには？"
         },
         "frame_108": {
-          "how_do_i_withdraw_profits": "利益を引き出すにはどうすればよいですか？"
+          "how_do_i_withdraw_profits": "利益はどうやって出金しますか？"
         },
         "frame_107": {
-          "do_i_owe_whalebase_money_if_i_lose": "損失が出た場合、Whalebaseにお金を返す必要がありますか？"
+          "do_i_owe_whalebase_money_if_i_lose": "損失が出た場合、Whalebaseにお金を返済する必要がありますか？"
         }
       }
     }
@@ -443,18 +443,18 @@
     "frame_66": {
       "frame_92": {
         "frame_83": {
-          "unlimited_number_of_free_trials": "無制限の無料トライアル"
+          "unlimited_number_of_free_trials": "無料トライアル無制限"
         },
         "frame_84": {
-          "trade_up_to_1_000_000_of_our_capital": "当社資本の最大$1,000,000まで取引可能"
+          "trade_up_to_1_000_000_of_our_capital": "最大$1,000,000の資金でトレード可能"
         },
         "frame_85": {
-          "withdraw_your_wins_anytime": "いつでも利益を引き出せます"
+          "withdraw_your_wins_anytime": "利益はいつでも出金できます"
         }
       },
       "frame_67": {
         "frame_36": {
-          "get_started": "始める"
+          "get_started": "今すぐ始める"
         },
         "frame_37": {
           "free_trial": "無料トライアル"
@@ -475,7 +475,7 @@
     "frame_385": {
       "frame_70": {
         "frame_69": {
-          "pricing": "料金"
+          "pricing": "料金プラン"
         }
       }
     }
@@ -485,31 +485,31 @@
       "frame_353": {
         "what_is_a_prop_trading": "プロップトレーディングとは？"
       },
-      "a_proprietary_trading_firm_allocates_its": "プロップトレーディング企業は、自社資本をトレーダーに配分します。トレーダーは最初に評価を受け、企業のリスクルールに従いながら利益の一部を獲得することができます。"
+      "a_proprietary_trading_firm_allocates_its": "プロップトレーディング会社は、自社資金をトレーダーに提供します。トレーダーはまず評価を受け、会社のリスクルールに従いながら利益の一部を獲得します。"
     },
     "frame_115": {
       "frame_353": {
-        "how_to_start": "始め方"
+        "how_to_start": "始め方は？"
       },
-      "getting_started_is_simple": "始めるのは簡単です：\nお好みのプログラム/口座サイズとトレード設定を選択します。\nルールに従い、利益目標に到達して、Whalebaseトレーディングチャレンジを完了します。\n合格後、パフォーマンスをレビューし、必要に応じて適格性チェックを完了します。\n承認されたら、ファンド口座へのアクセス権を受け取り、Whalebaseの利益分配モデルに基づいてトレーディングを開始できます。"
+      "getting_started_is_simple": "始め方はシンプルです：\nご希望のプログラム／口座サイズとトレード設定を選択してください。\nルールを守り、利益目標を達成してWhalebaseトレーディングチャレンジをクリアしてください。\n合格後、パフォーマンスを審査し、必要に応じて資格確認を行います。\n承認されると、資金提供口座へのアクセスが付与され、Whalebaseの利益配分モデルのもとでトレードを開始できます。"
     },
     "frame_116": {
       "frame_353": {
-        "how_do_i_become_a_funded_trader": "ファンド提供トレーダーになるにはどうすればよいですか？"
+        "how_do_i_become_a_funded_trader": "資金提供トレーダーになるには？"
       },
-      "a_one_step_challenge_or": "1段階のチャレンジ、または\n2段階のプロセス（チャレンジ+検証）。\nこれらのステージでは、リスク管理と一貫性を示すために、Whalebaseルールの下でシミュレーション環境でトレードします。"
+      "a_one_step_challenge_or": "1ステップチャレンジ、または\n2ステッププロセス（チャレンジ＋認証）。\nこれらのステージでは、Whalebaseのルールのもとシミュレーション環境でトレードを行い、リスク管理能力と安定性を実証します。"
     },
     "frame_117": {
       "frame_353": {
-        "how_do_i_withdraw_profits": "利益を引き出すにはどうすればよいですか？"
+        "how_do_i_withdraw_profits": "利益はどうやって出金しますか？"
       },
-      "if_eligible_you_submit_a_payout_request_": "適格である場合、ダッシュボードからペイアウトリクエストを送信します。適格性は通常、以下に基づいています：\n最小利益閾値\n最小トレーディング日数\nすべてのルール遵守\nペイアウトレビューチェック合格"
+      "if_eligible_you_submit_a_payout_request_": "条件を満たした場合、ダッシュボードから報酬出金リクエストを送信します。出金資格は通常、以下の条件に基づきます：\n最低利益額の達成\n最低取引日数の充足\n全ルールの遵守\n出金審査のクリア"
     },
     "frame_118": {
       "frame_353": {
-        "do_traders_owe_whalebase_money_if_they_l": "トレーダーが損失を出した場合、Whalebaseにお金を返す必要がありますか？"
+        "do_traders_owe_whalebase_money_if_they_l": "損失が出た場合、トレーダーはWhalebaseに返済義務がありますか？"
       },
-      "no_traders_are_generally_not_liable_for_": "いいえ。トレーダーがプログラムルールに従う限り、評価手数料を超える損失に対して責任を負うことはありません。"
+      "no_traders_are_generally_not_liable_for_": "いいえ。プログラムのルールを遵守している限り、トレーダーは評価手数料を超える損失について責任を負いません。"
     }
   }
 }
