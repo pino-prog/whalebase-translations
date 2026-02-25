@@ -1,0 +1,21 @@
+{
+  "name": "whalebasetrans",
+  "version": "1.0.0",
+  "description": "Figma → i18n JSON extractor & translator (KO/ZH/JA)",
+  "type": "module",
+  "scripts": {
+    "extract": "node src/index.js extract",
+    "translate": "node src/index.js translate",
+    "update": "node src/index.js update",
+    "sync": "node src/index.js sync",
+    "review": "node src/server.js",
+    "export": "node src/export.js",
+    "deploy": "node src/export.js && git add docs/ locales/ .cache/ && git commit -m 'Update translations review page' && git push"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.0",
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.0",
+    "localtunnel": "^2.0.2"
+  }
+}
