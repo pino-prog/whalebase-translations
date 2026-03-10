@@ -1,32 +1,35 @@
 /**
  * Claude API 기반 번역기
- * - 1단계: 번역 (단순 프롬프트, 안정적)
+ * - 1단계: 번역 (실제 플랫폼 용어집 참고, Sonnet 사용)
  * - 2단계: 신뢰도 점수 (별도 호출, 실패해도 번역 결과에 영향 없음)
  */
 import Anthropic from '@anthropic-ai/sdk';
 import { readFile, writeFile, mkdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
+import { PROJECT_DIR } from './config.js';
+import { loadGlossary } from './research.js';
 
 const LANGUAGES = {
   ko: 'Korean (한국어)',
-  zh: 'Chinese Simplified (简体中文)',
+  zh: 'Chinese Simplified (简체中文)',
   ja: 'Japanese (日本語)',
 };
 
-// 신뢰도 점수는 Sonnet 사용 (Haiku보다 JSON 구조 준수율 높음)
-const TRANSLATE_MODEL  = 'claude-haiku-4-5-20251001';
-const CONFIDENCE_MODEL = 'claude-haiku-4-5-20251001';
+// 번역: Sonnet (Haiku보다 품질이 훨씬 높음, 실제 플랫폼 표현 이해도 우수)
+const TRANSLATE_MODEL  = 'claude-sonnet-4-6';
+const CONFIDENCE_MODEL = 'claude-haiku-4-5-20251001'; // 신뢰도 점수는 Haiku로 충분
 
 const TRANSLATE_BATCH_SIZE  = 50;  // 안정성을 위해 50개로 줄임
 const CONFIDENCE_BATCH_SIZE = 80;
 
-const CONFIDENCE_FILE = path.join('.cache', 'confidence.json');
+const CONFIDENCE_FILE = path.join(PROJECT_DIR, '.cache', 'confidence.json');
 
 // ──────────────────────────────────────────────
 // 번역에서 영어 그대로 유지할 용어 (진짜 고유명사/약어만)
 // ──────────────────────────────────────────────
 const KEEP_IN_ENGLISH = `
+Service name: "Whalebase" — always keep exactly as "Whalebase" in all languages, never translate or transliterate
 Cryptocurrency tickers: BTC, ETH, SOL, USDT, USDC, BNB (and any other crypto tickers)
 Financial abbreviations: PnL, P&L, ROI, APY, APR, AML, KYC
 Chart indicators: RSI, MACD, EMA, SMA, VWAP, ATR, OBV
@@ -37,6 +40,14 @@ Brand/product names that are proper nouns
 export class Translator {
   constructor(apiKey) {
     this.client = new Anthropic({ apiKey });
+    this._glossaryCache = null;
+  }
+
+  async _getGlossary(lang) {
+    if (!this._glossaryCache) {
+      this._glossaryCache = await loadGlossary();
+    }
+    return this._glossaryCache[lang] || {};
   }
 
   // ──────────────────────────────────────────────
@@ -45,6 +56,15 @@ export class Translator {
   async translateFlatMap(flatMap, targetLang) {
     const langName = LANGUAGES[targetLang];
     if (!langName) throw new Error(`지원하지 않는 언어: ${targetLang}`);
+
+    // 용어집 로드 (research.js로 생성된 실제 플랫폼 표현)
+    const glossary = await this._getGlossary(targetLang);
+    const glossarySize = Object.keys(glossary).length;
+    if (glossarySize > 0) {
+      console.log(`   📚 용어집 적용 중 (${glossarySize}개 참고 표현)`);
+    } else {
+      console.log(`   ℹ️  용어집 없음 — npm run research 실행 시 번역 품질이 향상됩니다`);
+    }
 
     const entries = Object.entries(flatMap);
     const translatedResult = {};
@@ -56,7 +76,7 @@ export class Translator {
       const totalBatches = Math.ceil(entries.length / TRANSLATE_BATCH_SIZE);
       process.stdout.write(`   번역 중 [${targetLang}] 배치 ${batchNum}/${totalBatches}...`);
 
-      const translated = await this._translateBatch(batch, langName);
+      const translated = await this._translateBatch(batch, langName, glossary);
       Object.assign(translatedResult, translated);
       console.log(' 완료');
     }
@@ -82,21 +102,42 @@ export class Translator {
   }
 
   // ──────────────────────────────────────────────
-  // 번역 배치 (단순하고 안정적인 프롬프트)
+  // 번역 배치 (실제 플랫폼 용어집 기반)
   // ──────────────────────────────────────────────
-  async _translateBatch(batch, langName, retryCount = 0) {
+  async _translateBatch(batch, langName, glossary = {}, retryCount = 0) {
     const inputJson = JSON.stringify(batch, null, 2);
+
+    // 배치에 해당하는 용어집 항목만 추출 (프롬프트 길이 최적화)
+    const relevantGlossary = {};
+    for (const enText of Object.values(batch)) {
+      for (const [en, tr] of Object.entries(glossary)) {
+        if (enText.toLowerCase().includes(en.toLowerCase()) || en.toLowerCase().includes(enText.toLowerCase())) {
+          relevantGlossary[en] = tr;
+        }
+      }
+    }
+    // 관련 없어도 주요 용어 20개는 항상 포함
+    const topTerms = Object.entries(glossary).slice(0, 20);
+    for (const [en, tr] of topTerms) relevantGlossary[en] = tr;
+
+    const glossarySection = Object.keys(relevantGlossary).length > 0
+      ? `\nREFERENCE GLOSSARY (terms actually used on real ${langName} trading platforms):
+${Object.entries(relevantGlossary).map(([en, tr]) => `  "${en}" → "${tr}"`).join('\n')}
+
+Prioritize these glossary terms over literal translations. They reflect real platform usage.\n`
+      : '';
 
     const prompt = `Translate all English values in this JSON to ${langName}.
 This is a professional prop trading and cryptocurrency platform UI.
-
+${glossarySection}
 IMPORTANT: You MUST translate EVERY value into ${langName}. Do not leave values in English.
 Exception — keep in English only: ${KEEP_IN_ENGLISH}
 
 Rules:
 - Keep all JSON keys exactly the same
 - Preserve template variables as-is: {variable}, {{var}}, %s, %d, :var
-- Use natural, concise language suitable for trading platform UI
+- Use natural expressions that real traders and platform users actually say
+- Prefer shorter, snappier UI text over verbose literal translations
 - Return ONLY the translated JSON object. No markdown, no explanation, nothing else.
 
 ${inputJson}`;
@@ -207,7 +248,8 @@ ${inputJson}`;
   // 신뢰도 파일 저장
   // ──────────────────────────────────────────────
   async _saveConfidence(lang, confidenceMap) {
-    if (!existsSync('.cache')) await mkdir('.cache', { recursive: true });
+    const cacheDir = path.join(PROJECT_DIR, '.cache');
+    if (!existsSync(cacheDir)) await mkdir(cacheDir, { recursive: true });
     let all = {};
     if (existsSync(CONFIDENCE_FILE)) {
       try { all = JSON.parse(await readFile(CONFIDENCE_FILE, 'utf-8')); } catch { all = {}; }

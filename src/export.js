@@ -5,10 +5,10 @@
  * - 검토자가 브라우저에서 열어서 수정 후 JSON 다운로드
  * - 서버/인터넷 연결 불필요
  */
-import 'dotenv/config';
 import { writeFile, mkdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
+import { PROJECT_DIR } from './config.js';
 import { nestedToFlat } from './keyGen.js';
 import { loadConfidence } from './translator.js';
 import { readLocale } from './locales.js';
@@ -425,7 +425,7 @@ renderTable(ALL_ROWS);
 
 // ── 실행 ──
 async function main() {
-  if (!existsSync(path.join('locales', 'en.json'))) {
+  if (!existsSync(path.join(PROJECT_DIR, 'locales', 'en.json'))) {
     console.error('❌ locales/en.json이 없습니다. 먼저 npm run sync를 실행하세요.');
     process.exit(1);
   }

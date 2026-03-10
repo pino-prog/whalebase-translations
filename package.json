@@ -8,9 +8,14 @@
     "translate": "node src/index.js translate",
     "update": "node src/index.js update",
     "sync": "node src/index.js sync",
+    "research": "node src/research.js",
+    "research:force": "node src/research.js --force",
     "review": "node src/server.js",
     "export": "node src/export.js",
-    "deploy": "node src/export.js && git add docs/ locales/ .cache/ && git commit -m 'Update translations review page' && git push"
+    "deploy": "node src/export.js && git add docs/ locales/ .cache/ && git commit -m 'Update translations review page' && git push",
+    "sync:project": "node src/index.js sync --project",
+    "update:project": "node src/index.js update --project",
+    "review:project": "node src/server.js --project"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.36.0",

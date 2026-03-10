@@ -1,515 +1,143 @@
 {
-  "frame_282": {
-    "frame_331": {
-      "frame_66": {
-        "frame_65": {
-          "whalebase_prop_trading_on": "Whalebase - 专属自营交易平台"
-        },
-        "trading": "交易，\n由Whalebase提供资金支持。",
-        "you_take_the_profits_leave_the_losses_to": "盈利归你，亏损由我们承担。"
-      },
-      "frame_67": {
-        "frame_36": {
-          "get_started": "立即开始"
-        },
-        "frame_37": {
-          "free_trial": "免费试用"
-        }
-      }
-    },
-    "frame_89": {
-      "frame_74": {
-        "whalebase_traders": "Whalebase交易员"
-      },
-      "frame_75": {
-        "evaluation_pass_rate": "评估通过率"
-      },
-      "frame_77": {
-        "total_payout": "累计出金"
-      }
-    },
-    "frame_301": {
-      "frame_298": {
-        "frame_299": {
-          "why": "为什么交易员\n选择\nWhalebase"
-        }
-      }
-    },
-    "frame_91": {
-      "frame_88": {
-        "successful_payouts": "Whalebase交易员\n成功出金记录",
-        "we_help_traders_achieve_financial_succes": "我们助力交易员实现财务自由，与我们共同成长。"
-      }
-    },
-    "frame_306": {
-      "frame_89": {
-        "frame_321": {
-          "how_it_works": "如何运作",
-          "start_earning_rewards_all_it_takes_is_tw": "开始赚取收益，只需两步。"
-        }
-      }
-    },
-    "frame_305": {
-      "frame_89": {
-        "frame_321": {
-          "choose_your_challenge": "选择你的挑战",
-          "select_the_challenge_that_fits_your_trad": "选择适合你交易风格与目标的挑战方案。"
-        }
-      }
-    },
-    "frame_307": {
-      "frame_88": {
-        "grow_with_us": "与我们共同成长",
-        "learn_connect": "学习、交流，\n与一群纪律严明的交易员共同进步。"
-      }
-    },
-    "frame_308": {
-      "frame_88": {
-        "customer_support": "客户支持",
-        "our_team_is_here": "我们的团队随时为您提供支持，\n让您安心交易。"
-      }
-    },
-    "frame_304": {
-      "frame_294": {
-        "frequently_asked_questions": "常见问题"
-      }
-    },
-    "frame_373": {
-      "frame_66": {
-        "become_a_whale_today": "今天就成为巨鲸。"
-      }
-    },
-    "frame_371": {
-      "frame_70": {
-        "frame_373": {
-          "2026_whalebase_all_rights_reserved": "© 2026 Whalebase。保留所有权利。"
-        }
-      }
-    },
-    "gnb": {
-      "frame_385": {
-        "frame_246": {
-          "whalebase": "Whalebase"
-        }
-      },
-      "frame_162": {
-        "frame_36": {
-          "log_in": "登录"
-        },
-        "frame_35": {
-          "get_started": "立即开始"
-        }
-      }
-    }
+  "hero": {
+    "whalebase_prop_trading_on": "Whalebase - Prop Trading on",
+    "trading": "交易，\n由Whalebase提供资金支持。",
+    "you_take_the_profits_leave_the_losses_to": "盈利归你，亏损由我们承担。",
+    "get_started": "立即开始",
+    "free_trial": "免费试用",
+    "whalebase_traders": "Whalebase交易员",
+    "evaluation_pass_rate": "评估通过率",
+    "total_payout": "累计出金"
   },
-  "frame_330": {
-    "frame_81": {
-      "frame_329": {
-        "frame_312": {
-          "why": "为什么选择\n自营交易"
-        },
-        "frame_311": {
-          "keep_90_of_the_profits": "保留90%的盈利，\n100%的亏损由我们承担。"
-        }
-      }
-    }
+  "why_prop": {
+    "why": "为什么选择\n自营交易",
+    "deposit_100": "存入 $100，",
+    "trade_with_10_000": "使用 $10,000 进行交易。",
+    "keep_90_of_the_profits": "获得 90% 的交易利润，\n亏损100%由我们承担。"
   },
-  "frame_329": {
-    "frame_311": {
-      "frame_318": {
-        "frame_319": {
-          "deposit_100": "存入 $100，"
-        },
-        "frame_310": {
-          "trade_with_10_000": "使用 $10,000 进行交易。"
-        }
-      }
-    }
+  "why_whalebase": {
+    "why": "为什么交易员\n选择\nWhalebase",
+    "no_hidden_costs": "无隐性费用",
+    "no_extra_cost_ever_your_initial_deposit_": "零额外收费。首次存款即为唯一承诺。",
+    "scale_your_deposit": "扩大你的存款规模",
+    "up_to_200x_the_bigger_your_deposit_the_b": "最高200倍杠杆。存款越多，我们提供的资金越大。",
+    "minimal_requirement": "最低门槛",
+    "single_step_evaluation_pass_one_evaluati": "一步评估即可激活100倍规模，门槛极低。",
+    "futures_trading": "期货交易",
+    "more_leverage_with_futures_high_performa": "期货更高杠杆，由DeepBook Margin驱动的高性能执行引擎。",
+    "understand_your_trade": "了解你的交易",
+    "ai_powered_analysis_master_the_market_wi": "AI智能分析，实时绩效看板，掌控市场动态。",
+    "global_assets": "全球资产",
+    "from_us_stocks_commodities_to_crypto_str": "涵盖美股、大宗商品及加密货币，通过Sui原生RWA一站式接入全球流动性。"
   },
-  "frame_301": {
-    "frame_298": {
-      "frame_296": {
-        "frame_304": {
-          "no_hidden_costs": "无隐性费用",
-          "no_extra_cost_ever_your_initial_deposit_": "零额外收费。首次存款即为你的唯一成本。"
-        }
-      },
-      "frame_300": {
-        "frame_304": {
-          "scale_your_deposit": "扩大你的存款规模",
-          "up_to_200x_the_bigger_your_deposit_the_b": "最高200倍。存款越多，我们的资金支持越大。"
-        }
-      }
-    },
-    "frame_299": {
-      "frame_296": {
-        "frame_304": {
-          "minimal_requirement": "最低门槛",
-          "single_step_evaluation_pass_one_evaluati": "一步评估。通过一次评估，即可解锁100倍资金规模。"
-        }
-      },
-      "frame_303": {
-        "frame_304": {
-          "futures_trading": "期货交易",
-          "more_leverage_with_futures_high_performa": "期货更高杠杆，由DeepBook Margin驱动的高性能执行引擎。"
-        }
-      },
-      "frame_309": {
-        "frame_304": {
-          "understand_your_trade": "了解你的交易",
-          "ai_powered_analysis_master_the_market_wi": "AI驱动分析，借助实时绩效看板掌握市场动态。"
-        }
-      },
-      "frame_308": {
-        "frame_304": {
-          "global_assets": "全球资产",
-          "from_us_stocks_commodities_to_crypto_str": "涵盖美股、大宗商品及加密货币，通过Sui原生RWA一站式接入全球流动性。"
-        }
-      }
-    },
-    "frame_107": {
-      "frame_98": {
-        "frame_95": {
-          "account_balance": "账户余额"
-        },
-        "frame_94": {
-          "evaluation_fee": "评估费"
-        }
-      }
-    }
+  "successful_payouts": {
+    "successful_payouts": "Whalebase交易员\n成功出金记录",
+    "we_help_traders_achieve_financial_succes": "我们助力交易员实现财务自由，共同成就卓越交易生涯。",
+    "nick_name_or_e_mail_address": "昵称或电子邮箱",
+    "show": "显示",
+    "nick_name_or_e_mail_address_2": "昵称或电子邮箱",
+    "show_2": "显示",
+    "nick_name_or_e_mail_address_3": "昵称或电子邮箱",
+    "show_3": "显示"
   },
-  "frame_91": {
-    "frame_80": {
-      "frame_34": {
-        "frame_82": {
-          "nick_name_or_e_mail_address": "昵称或电子邮箱"
-        },
-        "frame_86": {
-          "show": "显示"
-        }
-      },
-      "frame_46": {
-        "frame_82": {
-          "nick_name_or_e_mail_address": "昵称或电子邮箱"
-        },
-        "frame_86": {
-          "show": "显示"
-        }
-      },
-      "frame_47": {
-        "frame_82": {
-          "nick_name_or_e_mail_address": "昵称或电子邮箱"
-        },
-        "frame_86": {
-          "show": "显示"
-        }
-      }
-    }
+  "how_it_works": {
+    "how_it_works": "如何运作",
+    "start_earning_rewards_all_it_takes_is_tw": "开始赚取收益，只需两步。",
+    "evaluation": "评估阶段",
+    "challenge": "挑战赛",
+    "a_one_time_evaluation_of_trading_perform": "一次性评估交易表现与风险控制能力。",
+    "choose_your_challenge": "选择你的挑战方案",
+    "achieve_your_profit_target": "达成盈利目标",
+    "follow_the_trading_objectives": "遵守交易规则",
+    "get_funded_payouts": "获得资金与出金",
+    "funded_account": "资金账户",
+    "start_trading_on_a_funded_account_with_w": "在资金账户上开始交易，利润随时可提现。",
+    "get_a_real_funded_account_up_to_1_000_00": "获得最高 $1,000,000 的真实资金账户",
+    "take_90_of_your_profits": "获得 90% 的交易利润",
+    "follow_the_same_trading_objectives": "遵守相同的交易规则"
   },
-  "frame_306": {
-    "frame_316": {
-      "frame_296": {
-        "frame_284": {
-          "evaluation": "评估阶段"
-        }
-      },
-      "frame_298": {
-        "frame_284": {
-          "get_funded_payouts": "获得资金与出金"
-        }
-      }
-    }
+  "challenge": {
+    "choose_your_challenge": "选择你的挑战",
+    "select_the_challenge_that_fits_your_trad": "选择最适合你交易风格与目标的挑战方案。",
+    "overview": "总览",
+    "show_steps": "查看步骤",
+    "account_balance": "账户余额",
+    "recommended": "推荐",
+    "25_discount": "75折优惠",
+    "evaluation_fee": "评估费",
+    "avg_payout": "平均出金额",
+    "account_balance_2": "账户余额",
+    "25_discount_2": "75折优惠",
+    "evaluation_fee_2": "评估费",
+    "avg_payout_2": "平均出金额",
+    "account_balance_3": "账户余额",
+    "25_discount_3": "75折优惠",
+    "evaluation_fee_3": "评估费",
+    "avg_payout_3": "平均出金额",
+    "summary": "概览",
+    "show_number": "显示数字",
+    "account_balance_4": "账户余额",
+    "profit_target": "盈利目标",
+    "max_daily_drawdown": "每日最大亏损",
+    "max_loss": "最大亏损",
+    "min_trading_days": "最少交易天数",
+    "10_days": "10 天",
+    "trading_period": "交易周期",
+    "unlimited": "无限制",
+    "start_challenge": "开始挑战"
   },
-  "frame_316": {
-    "frame_296": {
-      "frame_322": {
-        "frame_82": {
-          "challenge": "挑战赛",
-          "a_one_time_evaluation_of_trading_perform": "一次性交易表现与风险控制评估。"
-        }
-      }
-    },
-    "frame_298": {
-      "frame_322": {
-        "frame_93": {
-          "funded_account": "资金账户",
-          "start_trading_on_a_funded_account_with_w": "在资金账户上开始交易，收益可随时提取。"
-        }
-      },
-      "frame_325": {
-        "frame_284": {
-          "summary": "概览"
-        },
-        "frame_86": {
-          "show_number": "显示数字"
-        }
-      },
-      "frame_324": {
-        "frame_105": {
-          "start_challenge": "开始挑战"
-        }
-      }
-    }
+  "contact": {
+    "grow_with_us": "与我们共同成长",
+    "learn_connect": "学习、交流，\n与一群纪律严明的交易员共同成长。",
+    "discord_community": "Discord 社群",
+    "community_and_direct_support": "社群与直接支持。",
+    "coming_soon": "即将上线",
+    "youtube_channel": "YouTube 频道",
+    "tutorials_and_trading_education": "教程与交易学习资源。",
+    "coming_soon_2": "即将上线",
+    "customer_support": "客户支持",
+    "our_team_is_here": "我们的团队随时为您提供支持，\n让您安心交易。",
+    "open_a_ticket_on_discord": "在 Discord 提交工单",
+    "request_support_to_your_dedicated_manage": "联系您的专属客户经理获取支持。",
+    "coming_soon_3": "即将上线",
+    "e_mail": "电子邮箱",
+    "support_whalebase_trade": "support@whalebase.trade",
+    "coming_soon_4": "即将上线"
   },
-  "frame_296": {
-    "frame_322": {
-      "frame_92": {
-        "frame_83": {
-          "choose_your_challenge": "选择你的挑战方案"
-        },
-        "frame_84": {
-          "achieve_your_profit_target": "达成盈利目标"
-        },
-        "frame_85": {
-          "follow_the_trading_objectives": "遵守交易规则"
-        }
-      }
-    },
-    "frame_107": {
-      "frame_98": {
-        "frame_95": {
-          "account_balance": "账户余额"
-        },
-        "frame_94": {
-          "evaluation_fee": "评估费"
-        }
-      }
-    }
+  "faq": {
+    "frequently_asked_questions": "常见问题",
+    "what_is_a_prop_trading": "什么是自营交易？",
+    "how_do_i_start": "如何开始？",
+    "how_do_i_become_a_funded_trader": "如何成为获资助的交易员？",
+    "how_do_i_withdraw_profits": "如何提取盈利？",
+    "do_i_owe_whalebase_money_if_i_lose": "亏损了需要向 Whalebase 还款吗？"
   },
-  "frame_298": {
-    "frame_322": {
-      "frame_94": {
-        "frame_83": {
-          "get_a_real_funded_account_up_to_1_000_00": "获得最高 $1,000,000 的真实资金账户"
-        },
-        "frame_84": {
-          "take_90_of_your_profits": "获得 90% 的交易利润"
-        },
-        "frame_85": {
-          "follow_the_same_trading_objectives": "遵守相同的交易规则"
-        }
-      }
-    },
-    "frame_324": {
-      "frame_102": {
-        "frame_82": {
-          "account_balance": "账户余额"
-        },
-        "frame_97": {
-          "profit_target": "盈利目标"
-        },
-        "frame_93": {
-          "max_daily_drawdown": "每日最大亏损"
-        },
-        "frame_94": {
-          "max_loss": "最大亏损"
-        },
-        "frame_95": {
-          "min_trading_days": "最少交易天数",
-          "10_days": "10 天"
-        },
-        "frame_96": {
-          "trading_period": "交易周期",
-          "unlimited": "无限制"
-        }
-      }
-    }
-  },
-  "frame_305": {
-    "frame_89": {
-      "frame_327": {
-        "frame_105": {
-          "overview": "总览"
-        },
-        "frame_322": {
-          "show_steps": "查看步骤"
-        }
-      }
-    }
-  },
-  "frame_98": {
-    "frame_95": {
-      "frame_108": {
-        "frame_284": {
-          "recommended": "推荐"
-        },
-        "frame_285": {
-          "25_discount": "75折优惠",
-          "25_discount_2": "75折优惠",
-          "25_discount_3": "75折优惠"
-        }
-      }
-    }
-  },
-  "frame_323": {
-    "frame_296": {
-      "frame_107": {
-        "frame_96": {
-          "avg_payout": "平均出金额"
-        }
-      }
-    },
-    "frame_301": {
-      "frame_107": {
-        "frame_96": {
-          "avg_payout": "平均出金额"
-        }
-      }
-    },
-    "frame_302": {
-      "frame_107": {
-        "frame_96": {
-          "avg_payout": "平均出金额"
-        }
-      }
-    }
-  },
-  "frame_302": {
-    "frame_107": {
-      "frame_98": {
-        "frame_95": {
-          "account_balance": "账户余额"
-        },
-        "frame_94": {
-          "evaluation_fee": "评估费"
-        }
-      }
-    }
-  },
-  "frame_80": {
-    "frame_38": {
-      "frame_351": {
-        "frame_82": {
-          "discord_community": "Discord 社群",
-          "community_and_direct_support": "社群与直接支持。"
-        },
-        "frame_34": {
-          "coming_soon": "即将上线"
-        }
-      },
-      "frame_82": {
-        "frame_352": {
-          "open_a_ticket_on_discord": "在 Discord 提交工单",
-          "request_support_to_your_dedicated_manage": "联系您的专属客户经理获取支持。"
-        },
-        "frame_34": {
-          "coming_soon": "即将上线"
-        }
-      }
-    },
-    "frame_42": {
-      "frame_351": {
-        "frame_82": {
-          "youtube_channel": "YouTube 频道",
-          "tutorials_and_trading_education": "教程与交易学习资源。"
-        },
-        "frame_34": {
-          "coming_soon": "即将上线"
-        }
-      },
-      "frame_82": {
-        "frame_352": {
-          "e_mail": "电子邮箱",
-          "support_whalebase_trade": "support@whalebase.trade"
-        },
-        "frame_34": {
-          "coming_soon": "即将上线"
-        }
-      }
-    }
-  },
-  "frame_304": {
-    "frame_294": {
-      "frame_128": {
-        "frame_102": {
-          "what_is_a_prop_trading": "什么是自营交易？"
-        },
-        "frame_109": {
-          "how_do_i_start": "如何开始？"
-        },
-        "frame_105": {
-          "how_do_i_become_a_funded_trader": "如何成为资金账户交易员？"
-        },
-        "frame_108": {
-          "how_do_i_withdraw_profits": "如何提取收益？"
-        },
-        "frame_107": {
-          "do_i_owe_whalebase_money_if_i_lose": "亏损后需要向Whalebase赔偿吗？"
-        }
-      }
-    }
-  },
-  "frame_373": {
-    "frame_66": {
-      "frame_92": {
-        "frame_83": {
-          "unlimited_number_of_free_trials": "无限次免费试用"
-        },
-        "frame_84": {
-          "trade_up_to_1_000_000_of_our_capital": "最高可交易$1,000,000资金"
-        },
-        "frame_85": {
-          "withdraw_your_wins_anytime": "随时提取盈利"
-        }
-      },
-      "frame_67": {
-        "frame_36": {
-          "get_started": "立即开始"
-        },
-        "frame_37": {
-          "free_trial": "免费试用"
-        }
-      }
-    }
-  },
-  "frame_371": {
-    "frame_70": {
-      "frame_373": {
-        "frame_209": {
-          "whalebase": "Whalebase"
-        }
-      }
-    }
+  "footer": {
+    "become_a_whale_today": "今天就成为巨鲸。",
+    "unlimited_number_of_free_trials": "无限次免费试用",
+    "trade_up_to_1_000_000_of_our_capital": "最高可交易 $1,000,000 的我方资金",
+    "withdraw_your_wins_anytime": "随时提取您的收益",
+    "get_started": "立即开始",
+    "free_trial": "免费试用",
+    "whalebase": "Whalebase",
+    "2026_whalebase_all_rights_reserved": "© 2026 Whalebase。保留所有权利。"
   },
   "gnb": {
-    "frame_385": {
-      "frame_70": {
-        "frame_69": {
-          "pricing": "价格方案"
-        }
-      }
-    }
+    "whalebase": "Whalebase",
+    "pricing": "收费方案",
+    "log_in": "登录",
+    "get_started": "立即开始"
   },
-  "frame_336": {
-    "frame_102": {
-      "frame_353": {
-        "what_is_a_prop_trading": "什么是自营交易？"
-      },
-      "a_proprietary_trading_firm_allocates_its": "自营交易公司将自有资金分配给交易员。交易员通常需先通过评估，再按照公司风控规则进行交易，并从盈利中获得分成。"
-    },
-    "frame_115": {
-      "frame_353": {
-        "how_to_start": "如何开始？"
-      },
-      "getting_started_is_simple": "开始非常简单：\n选择您偏好的方案/账户规模及交易设置。\n遵守规则并达成盈利目标，完成Whalebase交易挑战赛。\n通过后，我们将审核您的表现，并在必要时完成资格审查。\n审核通过后，您将获得资金账户访问权限，并可按照Whalebase盈利分成模式开始交易。"
-    },
-    "frame_116": {
-      "frame_353": {
-        "how_do_i_become_a_funded_trader": "如何成为资金账户交易员？"
-      },
-      "a_one_step_challenge_or": "一步式挑战赛，或\n两步流程（挑战赛 + 验证阶段）。\n在这些阶段中，您将在Whalebase规则下于模拟环境中交易，以展示风险管控能力和稳定性。"
-    },
-    "frame_117": {
-      "frame_353": {
-        "how_do_i_withdraw_profits": "如何提取收益？"
-      },
-      "if_eligible_you_submit_a_payout_request_": "符合条件后，您可在后台提交出金申请。出金资格通常需满足以下条件：\n最低盈利门槛\n最低交易天数\n遵守所有规则\n通过出金审核"
-    },
-    "frame_118": {
-      "frame_353": {
-        "do_traders_owe_whalebase_money_if_they_l": "亏损后交易员需要向Whalebase赔偿吗？"
-      },
-      "no_traders_are_generally_not_liable_for_": "不需要。只要遵守项目规则，交易员通常无需承担超出评估费以外的亏损责任。"
-    }
+  "faq_dropdown": {
+    "what_is_a_prop_trading": "什么是自营交易？",
+    "a_proprietary_trading_firm_allocates_its": "自营交易公司将自有资金分配给交易员。交易员通常需先通过评估，再按规定的风控规则进行交易并分享盈利。",
+    "how_to_start": "如何开始？",
+    "getting_started_is_simple": "开始非常简单：\n选择您偏好的账户方案、账户规模及交易设置。\n遵守规则并达成盈利目标，完成Whalebase交易挑战赛。\n通过后，我们将审核您的交易表现，并在必要时完成资格核查。\n审核通过后，您将获得资金账户访问权限，并可按照Whalebase分润模式开始交易。",
+    "how_do_i_become_a_funded_trader": "如何成为资金账户交易员？",
+    "a_one_step_challenge_or": "一步式挑战赛，或\n两步式流程（挑战赛 + 验证阶段）。\n在这些阶段中，您将在Whalebase规则下进行模拟交易，以证明您的风险控制能力与交易稳定性。",
+    "how_do_i_withdraw_profits": "如何提取盈利？",
+    "if_eligible_you_submit_a_payout_request_": "符合条件后，您可从控制面板提交出金申请。出金资格通常取决于：\n最低盈利门槛\n最低交易天数\n遵守所有规则\n通过出金审核",
+    "do_traders_owe_whalebase_money_if_they_l": "亏损后交易员需要向Whalebase赔偿吗？",
+    "no_traders_are_generally_not_liable_for_": "不需要。只要遵守项目规则，交易员通常无需承担超出评估费以外的任何亏损责任。"
   }
 }

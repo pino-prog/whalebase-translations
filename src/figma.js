@@ -111,9 +111,11 @@ function traverse(node, parentPath, nodes, stats, depth) {
   }
 
   // 현재 노드 이름을 경로에 포함할지 결정
+  // 첫 번째 frame/section만 경로에 포함 (parentPath가 비어있을 때만)
   const isPathNode = PATH_NODE_TYPES.has(node.type);
   const isSkipNode = SKIP_PATH_TYPES.has(node.type) || node.type === 'CANVAS';
-  const newPath = (!isSkipNode && isPathNode) ? [...parentPath, node.name] : parentPath;
+  const addToPath = !isSkipNode && isPathNode && parentPath.length === 0;
+  const newPath = addToPath ? [node.name] : parentPath;
 
   if (node.children) {
     for (const child of node.children) {

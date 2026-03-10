@@ -4,8 +4,9 @@
 import { readFile, writeFile, mkdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
+import { PROJECT_DIR } from './config.js';
 
-const LOCALES_DIR = 'locales';
+const LOCALES_DIR = path.join(PROJECT_DIR, 'locales');
 const SUPPORTED_LANGS = ['en', 'ko', 'zh', 'ja'];
 
 export async function ensureLocalesDir() {

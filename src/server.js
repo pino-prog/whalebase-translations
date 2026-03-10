@@ -3,7 +3,7 @@
  * - 로컬 실행: npm run review  → http://localhost:3000
  * - 외부 공유: npm run share   → 공개 URL 자동 생성 (비밀번호 보호)
  */
-import 'dotenv/config';
+import './config.js'; // PROJECT_DIR 설정 및 .env 로드
 import { createServer } from 'http';
 import { readFile, writeFile } from 'fs/promises';
 import { existsSync } from 'fs';
@@ -11,6 +11,7 @@ import path from 'path';
 import { nestedToFlat, flatToNested } from './keyGen.js';
 import { loadConfidence } from './translator.js';
 import { readLocale, writeLocale, setNestedKey } from './locales.js';
+import { PROJECT_DIR } from './config.js';
 
 const PORT = 3000;
 const LANGS = ['ko', 'zh', 'ja'];
@@ -35,7 +36,7 @@ function checkAuth(req, res) {
 
   // 인증 실패 → 브라우저에 로그인 팝업 표시
   res.writeHead(401, {
-    'WWW-Authenticate': 'Basic realm="번역 어드민 — 비밀번호를 입력하세요"',
+    'WWW-Authenticate': 'Basic realm="Translation Admin"',
     'Content-Type': 'text/html; charset=utf-8',
   });
   res.end('<html><body style="padding:40px;font-family:sans-serif"><h2>🔒 접근 제한</h2><p>비밀번호가 필요합니다.</p></body></html>');
@@ -491,7 +492,7 @@ const server = createServer(async (req, res) => {
   if (req.method === 'GET' && (req.url === '/' || req.url === '')) {
     try {
       // en.json이 없으면 안내
-      if (!existsSync(path.join('locales', 'en.json'))) {
+      if (!existsSync(path.join(PROJECT_DIR, 'locales', 'en.json'))) {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
         res.end(`<html><body style="font-family:sans-serif;padding:40px">
           <h2>⚠️ 번역 데이터가 없습니다</h2>
@@ -513,6 +514,17 @@ const server = createServer(async (req, res) => {
 
   res.writeHead(404);
   res.end('Not found');
+});
+
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(`\n❌ 포트 ${PORT}가 이미 사용 중입니다.`);
+    console.error('   이전에 실행한 서버가 아직 켜져 있을 수 있습니다.');
+    console.error('   아래 명령어로 기존 서버를 종료하고 다시 시도하세요:\n');
+    console.error(`   lsof -ti:${PORT} | xargs kill -9\n`);
+    process.exit(1);
+  }
+  throw err;
 });
 
 server.listen(PORT, async () => {

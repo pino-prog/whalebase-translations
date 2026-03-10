@@ -13,7 +13,7 @@
  *   ANTHROPIC_API_KEY  번역에 사용할 Claude API 키
  *   FIGMA_PAGE_NAME    (선택) 특정 페이지만 추출
  */
-import 'dotenv/config';
+import './config.js'; // PROJECT_DIR 설정 및 .env 로드
 import { fetchFigmaDocument, extractTextNodes } from './figma.js';
 import { buildFlatMap, flatToNested, nestedToFlat } from './keyGen.js';
 import { Translator } from './translator.js';
@@ -201,15 +201,16 @@ if (!command || !commands[command]) {
 사용법: node src/index.js <command>
 
 Commands:
-  extract    Figma에서 텍스트를 추출해 locales/en.json 생성
-  translate  locales/en.json을 한국어/중국어/일본어로 번역
-  update     Figma 변경 사항만 감지해 모든 locale 파일 업데이트
-  sync       extract + translate를 한번에 실행 (처음 시작 시)
+  extract          Figma에서 텍스트를 추출해 locales/en.json 생성
+  translate        locales/en.json을 한국어/중국어/일본어로 번역
+  update           Figma 변경 사항만 감지해 모든 locale 파일 업데이트
+  sync             extract + translate를 한번에 실행 (처음 시작 시)
 
 예시:
-  npm run sync         # 처음 시작
-  npm run update       # Figma 업데이트 이후
-  npm run translate    # 번역만 다시 실행
+  npm run sync             # 처음 시작
+  npm run update           # Figma 업데이트 이후
+  npm run translate        # 번역만 다시 실행
+
 `);
   process.exit(0);
 }

@@ -6,8 +6,9 @@
 import { readFile, writeFile, mkdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
+import { PROJECT_DIR } from './config.js';
 
-const CACHE_DIR = '.cache';
+const CACHE_DIR = path.join(PROJECT_DIR, '.cache');
 const CACHE_FILE = path.join(CACHE_DIR, 'translation-cache.json');
 
 export async function loadCache() {
