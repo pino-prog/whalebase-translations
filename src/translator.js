@@ -12,15 +12,28 @@ import { loadGlossary } from './research.js';
 
 const LANGUAGES = {
   ko: 'Korean (한국어)',
-  zh: 'Chinese Simplified (简체中文)',
+  zh: 'Chinese Simplified (简体中文)',
   ja: 'Japanese (日本語)',
+  id: 'Indonesian (Bahasa Indonesia)',
+  hi: 'Hindi (हिन्दी)',
+  tr: 'Turkish (Türkçe)',
+  vi: 'Vietnamese (Tiếng Việt)',
+  pt: 'Portuguese Brazilian (Português do Brasil)',
+  ru: 'Russian (Русский)',
+  de: 'German (Deutsch)',
+  es: 'Spanish (Español)',
+  fr: 'French (Français)',
 };
 
 // 번역: Sonnet (Haiku보다 품질이 훨씬 높음, 실제 플랫폼 표현 이해도 우수)
 const TRANSLATE_MODEL  = 'claude-sonnet-4-6';
 const CONFIDENCE_MODEL = 'claude-haiku-4-5-20251001'; // 신뢰도 점수는 Haiku로 충분
 
-const TRANSLATE_BATCH_SIZE  = 50;  // 안정성을 위해 50개로 줄임
+// CJK(ko/zh/ja)는 영어 대비 텍스트 길이가 비슷하거나 짧음 → 50개 배치 가능
+// 기타 언어(hi/ar/vi/pt 등)는 영어보다 3~5배 길어 토큰 초과 위험 → 25개로 제한
+const CJK_LANGS = new Set(['ko', 'zh', 'ja']);
+const TRANSLATE_BATCH_SIZE_CJK   = 50;
+const TRANSLATE_BATCH_SIZE_OTHER = 25;
 const CONFIDENCE_BATCH_SIZE = 80;
 
 const CONFIDENCE_FILE = path.join(PROJECT_DIR, '.cache', 'confidence.json');
@@ -68,12 +81,13 @@ export class Translator {
 
     const entries = Object.entries(flatMap);
     const translatedResult = {};
+    const batchSize = CJK_LANGS.has(targetLang) ? TRANSLATE_BATCH_SIZE_CJK : TRANSLATE_BATCH_SIZE_OTHER;
 
     // 1단계: 번역
-    for (let i = 0; i < entries.length; i += TRANSLATE_BATCH_SIZE) {
-      const batch = Object.fromEntries(entries.slice(i, i + TRANSLATE_BATCH_SIZE));
-      const batchNum = Math.floor(i / TRANSLATE_BATCH_SIZE) + 1;
-      const totalBatches = Math.ceil(entries.length / TRANSLATE_BATCH_SIZE);
+    for (let i = 0; i < entries.length; i += batchSize) {
+      const batch = Object.fromEntries(entries.slice(i, i + batchSize));
+      const batchNum = Math.floor(i / batchSize) + 1;
+      const totalBatches = Math.ceil(entries.length / batchSize);
       process.stdout.write(`   번역 중 [${targetLang}] 배치 ${batchNum}/${totalBatches}...`);
 
       const translated = await this._translateBatch(batch, langName, glossary);
@@ -146,7 +160,7 @@ ${inputJson}`;
     try {
       message = await this.client.messages.create({
         model: TRANSLATE_MODEL,
-        max_tokens: 4096,
+        max_tokens: 8192,
         messages: [{ role: 'user', content: prompt }],
       });
     } catch (err) {
@@ -154,7 +168,12 @@ ${inputJson}`;
     }
 
     const raw = message.content[0].text.trim();
-    const cleaned = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
+
+    // 마크다운 코드블록 제거 후 JSON 객체 부분만 추출
+    let cleaned = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
+    // JSON 객체가 설명 텍스트에 묻혀있는 경우 { ... } 범위 추출
+    const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
+    if (jsonMatch) cleaned = jsonMatch[0];
 
     try {
       const parsed = JSON.parse(cleaned);
@@ -167,14 +186,33 @@ ${inputJson}`;
       // 80% 이상이 번역 안됐으면 재시도 (최대 2회)
       if (unchangedCount / total > 0.8 && retryCount < 2) {
         console.log(`\n   ⚠️  번역 비율 낮음 (${total - unchangedCount}/${total}), 재시도...`);
-        return this._translateBatch(batch, langName, retryCount + 1);
+        return this._translateBatch(batch, langName, glossary, retryCount + 1);
       }
 
       return parsed;
     } catch {
+      // 응답이 잘린 경우(토큰 초과) 완성된 키-값 쌍만 부분 복구
+      const partial = {};
+      const pairRegex = /"([^"]+)"\s*:\s*"((?:[^"\\]|\\.)*)"/g;
+      let m;
+      while ((m = pairRegex.exec(cleaned)) !== null) {
+        if (m[1] in batch) partial[m[1]] = m[2];
+      }
+      if (Object.keys(partial).length > 0 && retryCount < 2) {
+        // 부분 복구 성공 — 누락된 키만 재시도
+        const missing = Object.fromEntries(
+          Object.entries(batch).filter(([k]) => !(k in partial))
+        );
+        console.log(`\n   ⚠️  응답 잘림 — ${Object.keys(partial).length}개 복구, ${Object.keys(missing).length}개 재시도...`);
+        if (Object.keys(missing).length > 0) {
+          const retried = await this._translateBatch(missing, langName, glossary, retryCount + 1);
+          return { ...partial, ...retried };
+        }
+        return partial;
+      }
       if (retryCount < 2) {
         console.log(`\n   ⚠️  JSON 파싱 실패, 재시도 (${retryCount + 1}/2)...`);
-        return this._translateBatch(batch, langName, retryCount + 1);
+        return this._translateBatch(batch, langName, glossary, retryCount + 1);
       }
       console.error('\n   ❌ 파싱 실패 — 해당 배치 영어 원문 유지');
       console.error('   응답 미리보기:', raw.substring(0, 150));
@@ -221,7 +259,9 @@ ${inputJson}`;
     }
 
     const raw = message.content[0].text.trim();
-    const cleaned = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
+    let cleaned = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
+    const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
+    if (jsonMatch) cleaned = jsonMatch[0];
     try {
       return JSON.parse(cleaned);
     } catch {

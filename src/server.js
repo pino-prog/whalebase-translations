@@ -5,7 +5,7 @@
  */
 import './config.js'; // PROJECT_DIR 설정 및 .env 로드
 import { createServer } from 'http';
-import { readFile, writeFile } from 'fs/promises';
+import { readFile, writeFile, readdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
 import { nestedToFlat, flatToNested } from './keyGen.js';
@@ -14,8 +14,27 @@ import { readLocale, writeLocale, setNestedKey } from './locales.js';
 import { PROJECT_DIR } from './config.js';
 
 const PORT = 3000;
-const LANGS = ['ko', 'zh', 'ja'];
-const LANG_LABELS = { ko: '한국어', zh: '중국어', ja: '일본어' };
+
+const ALL_LANG_LABELS = {
+  ko: '한국어', zh: '중국어', ja: '일본어',
+  id: 'Indonesia', hi: 'Hindi', tr: 'Türkçe',
+  vi: 'Tiếng Việt', pt: 'Português', ru: 'Русский',
+  de: 'Deutsch', es: 'Español', fr: 'Français',
+};
+
+// locales/ 디렉토리에서 실제 존재하는 번역 파일을 자동 감지 (en.json 제외)
+async function detectLangs() {
+  const localesDir = path.join(PROJECT_DIR, 'locales');
+  try {
+    const files = await readdir(localesDir);
+    return files
+      .filter(f => f.endsWith('.json') && f !== 'en.json' && !f.startsWith('.'))
+      .map(f => f.replace('.json', ''))
+      .sort();
+  } catch {
+    return [];
+  }
+}
 
 // --share 플래그 감지
 const IS_SHARE_MODE = process.argv.includes('--share');
@@ -46,12 +65,12 @@ function checkAuth(req, res) {
 // ──────────────────────────────────────────────
 // 모든 번역 데이터를 테이블 형식으로 병합
 // ──────────────────────────────────────────────
-async function buildTableData() {
+async function buildTableData(langs) {
   const enNested = await readLocale('en');
   const enFlat = nestedToFlat(enNested);
 
   const langFlats = {};
-  for (const lang of LANGS) {
+  for (const lang of langs) {
     const nested = await readLocale(lang);
     langFlats[lang] = nestedToFlat(nested);
   }
@@ -62,7 +81,7 @@ async function buildTableData() {
     const langData = {};
     let minConfidence = 100;
 
-    for (const lang of LANGS) {
+    for (const lang of langs) {
       const text = langFlats[lang][key] || '';
       const score = confidence[lang]?.[key] ?? null;
       langData[lang] = { text, confidence: score };
@@ -74,20 +93,15 @@ async function buildTableData() {
     return { key, en: enText, langs: langData, minConfidence };
   });
 
-  // 신뢰도 낮은 순으로 기본 정렬
-  rows.sort((a, b) => {
-    const ca = a.minConfidence ?? 100;
-    const cb = b.minConfidence ?? 100;
-    return ca - cb;
-  });
-
+  rows.sort((a, b) => (a.minConfidence ?? 100) - (b.minConfidence ?? 100));
   return rows;
 }
 
 // ──────────────────────────────────────────────
 // HTML 어드민 페이지
 // ──────────────────────────────────────────────
-function buildHTML(rows) {
+function buildHTML(rows, langs) {
+  const langLabels = Object.fromEntries(langs.map(l => [l, ALL_LANG_LABELS[l] || l.toUpperCase()]));
   const totalKeys = rows.length;
   const needsReview = rows.filter(r => r.minConfidence !== null && r.minConfidence < 80).length;
   const hasConfidence = rows.some(r => r.minConfidence !== null);
@@ -219,9 +233,7 @@ function buildHTML(rows) {
       <tr>
         <th>키</th>
         <th>영어 (원문)</th>
-        <th>한국어</th>
-        <th>중국어</th>
-        <th>일본어</th>
+        ${langs.map(l => `<th>${langLabels[l]}</th>`).join('\n        ')}
         <th style="text-align:center">최소 신뢰도</th>
       </tr>
     </thead>
@@ -232,8 +244,8 @@ function buildHTML(rows) {
 
 <script>
 const ALL_ROWS = ${rowsJson};
-const LANGS = ['ko', 'zh', 'ja'];
-const LANG_LABELS = { ko: '한국어', zh: '중국어', ja: '일본어' };
+const LANGS = ${JSON.stringify(langs)};
+const LANG_LABELS = ${JSON.stringify(langLabels)};
 let changes = {}; // { "ko::header.nav.home": "수정된 텍스트" }
 
 function confClass(score) {
@@ -500,8 +512,9 @@ const server = createServer(async (req, res) => {
         </body></html>`);
         return;
       }
-      const rows = await buildTableData();
-      const html = buildHTML(rows);
+      const langs = await detectLangs();
+      const rows = await buildTableData(langs);
+      const html = buildHTML(rows, langs);
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
       res.end(html);
     } catch (err) {

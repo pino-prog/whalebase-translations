@@ -5,7 +5,7 @@
  * - 검토자가 브라우저에서 열어서 수정 후 JSON 다운로드
  * - 서버/인터넷 연결 불필요
  */
-import { writeFile, mkdir } from 'fs/promises';
+import { writeFile, mkdir, readdir } from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
 import { PROJECT_DIR } from './config.js';
@@ -14,15 +14,33 @@ import { loadConfidence } from './translator.js';
 import { readLocale } from './locales.js';
 
 const OUTPUT_FILE = path.join('docs', 'index.html');
-const LANGS = ['ko', 'zh', 'ja'];
-const LANG_LABELS = { ko: '한국어', zh: '중국어', ja: '일본어' };
 
-async function buildTableData() {
+const ALL_LANG_LABELS = {
+  ko: '한국어', zh: '중국어', ja: '일본어',
+  id: 'Indonesia', hi: 'Hindi', tr: 'Türkçe',
+  vi: 'Tiếng Việt', pt: 'Português', ru: 'Русский',
+  de: 'Deutsch', es: 'Español', fr: 'Français',
+};
+
+async function detectLangs() {
+  const localesDir = path.join(PROJECT_DIR, 'locales');
+  try {
+    const files = await readdir(localesDir);
+    return files
+      .filter(f => f.endsWith('.json') && f !== 'en.json' && !f.startsWith('.'))
+      .map(f => f.replace('.json', ''))
+      .sort();
+  } catch {
+    return [];
+  }
+}
+
+async function buildTableData(langs) {
   const enNested = await readLocale('en');
   const enFlat = nestedToFlat(enNested);
 
   const langFlats = {};
-  for (const lang of LANGS) {
+  for (const lang of langs) {
     langFlats[lang] = nestedToFlat(await readLocale(lang));
   }
 
@@ -32,7 +50,7 @@ async function buildTableData() {
     const langData = {};
     let minConfidence = 100;
 
-    for (const lang of LANGS) {
+    for (const lang of langs) {
       const text = langFlats[lang][key] || '';
       const score = confidence[lang]?.[key] ?? null;
       langData[lang] = { text, confidence: score };
@@ -46,7 +64,8 @@ async function buildTableData() {
   return rows;
 }
 
-function buildExportHTML(rows) {
+function buildExportHTML(rows, langs) {
+  const langLabels = Object.fromEntries(langs.map(l => [l, ALL_LANG_LABELS[l] || l.toUpperCase()]));
   const totalKeys = rows.length;
   const needsReview = rows.filter(r => r.minConfidence !== null && r.minConfidence < 80).length;
   const confRows = rows.filter(r => r.minConfidence !== null);
@@ -182,9 +201,7 @@ function buildExportHTML(rows) {
       <tr>
         <th>키</th>
         <th>영어 (원문)</th>
-        <th>한국어</th>
-        <th>중국어</th>
-        <th>일본어</th>
+        ${langs.map(l => `<th>${langLabels[l]}</th>`).join('\n        ')}
         <th style="text-align:center">최소 신뢰도</th>
       </tr>
     </thead>
@@ -204,8 +221,8 @@ function buildExportHTML(rows) {
 
 <script>
 const ALL_ROWS = ${JSON.stringify(rows)};
-const LANGS = ['ko', 'zh', 'ja'];
-const LANG_LABELS = { ko: '한국어', zh: '중국어', ja: '일본어' };
+const LANGS = ${JSON.stringify(langs)};
+const LANG_LABELS = ${JSON.stringify(langLabels)};
 let changes = {}; // { "ko::key": "수정된 텍스트" }
 
 // ── 중첩 JSON 변환 (서버 없이 브라우저에서 직접 처리) ──
@@ -431,8 +448,10 @@ async function main() {
   }
 
   console.log('📦 번역 데이터 불러오는 중...');
-  const rows = await buildTableData();
-  const html = buildExportHTML(rows);
+  const langs = await detectLangs();
+  console.log(`   감지된 언어: ${langs.join(', ')}`);
+  const rows = await buildTableData(langs);
+  const html = buildExportHTML(rows, langs);
 
   if (!existsSync('docs')) await mkdir('docs', { recursive: true });
   await writeFile(OUTPUT_FILE, html, 'utf-8');

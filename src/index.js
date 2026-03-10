@@ -26,7 +26,22 @@ import {
   ensureLocalesDir,
 } from './locales.js';
 
-const TARGET_LANGS = ['ko', 'zh', 'ja'];
+// 지원하는 전체 언어 목록
+const SUPPORTED_LANGS = ['ko', 'zh', 'ja', 'id', 'hi', 'tr', 'vi', 'pt', 'ru', 'de', 'es', 'fr'];
+
+// 환경변수 TARGET_LANGS로 선택 (예: TARGET_LANGS=ko,zh,ja,id,tr)
+// 미설정 시 기본값: ko,zh,ja
+const TARGET_LANGS = (() => {
+  const raw = process.env.TARGET_LANGS || 'ko,zh,ja';
+  const langs = raw.split(',').map(s => s.trim()).filter(Boolean);
+  const invalid = langs.filter(l => !SUPPORTED_LANGS.includes(l));
+  if (invalid.length > 0) {
+    console.error(`❌ 지원하지 않는 언어 코드: ${invalid.join(', ')}`);
+    console.error(`   지원 언어: ${SUPPORTED_LANGS.join(', ')}`);
+    process.exit(1);
+  }
+  return langs;
+})();
 
 // ──────────────────────────────────────────────
 // 환경변수 검증
